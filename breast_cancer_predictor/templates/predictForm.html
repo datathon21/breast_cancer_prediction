@@ -82,61 +82,61 @@
                     <div class="field">
                         <label for="radius_mean"> Radius Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="radius_mean" min="0" step="0.01" placeholder="0.00">
+                            <input class="input" type="number" id="radius_mean" min="0" step="0.01" placeholder="0.00" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="texture_mean"> Texture Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="texture_mean" min="0" step="0.01" placeholder="0.00">
+                            <input class="input" type="number" id="texture_mean" min="0" step="0.01" placeholder="0.00" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="perimeter_mean"> Perimeter Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="perimeter_mean" min="0" step="0.1" placeholder="0.0">
+                            <input class="input" type="number" id="perimeter_mean" min="0" step="0.1" placeholder="0.0" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="area_mean"> Area Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="area_mean" min="0" step="1" placeholder="0">
+                            <input class="input" type="number" id="area_mean" min="0" step="1" placeholder="0" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="smoothness_mean"> Smoothness Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="smoothness_mean" min="0" step="0.0001" placeholder="0.0000">
+                            <input class="input" type="number" id="smoothness_mean" min="0" step="0.0001" placeholder="0.0000" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="compactness_mean"> Compactness Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="compactness_mean" min="0" step="0.0001" placeholder="0.0000">
+                            <input class="input" type="number" id="compactness_mean" min="0" step="0.0001" placeholder="0.0000" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="concavity_mean"> Concavity Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="concavity_mean" min="0" step="0.0001" placeholder="0.0000">
+                            <input class="input" type="number" id="concavity_mean" min="0" step="0.0001" placeholder="0.0000" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="concave_points_mean"> Concava Points Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="concave_points_mean" min="0" step="0.0001" placeholder="0.0000">
+                            <input class="input" type="number" id="concave_points_mean" min="0" step="0.0001" placeholder="0.0000" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="symmetry_mean"> Symmetry Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="symmetry_mean" min="0" step="0.0001" placeholder="0.0000">
+                            <input class="input" type="number" id="symmetry_mean" min="0" step="0.0001" placeholder="0.0000" required>
                         </div>
                     </div>
                     <div class="field">
                         <label for="fractal_dimension_mean"> Fractal Dimension Mean </label>
                         <div class="control">
-                            <input class="input" type="number" id="fractal_dimension_mean" min="0" step="0.00001" placeholder="0.00000">
+                            <input class="input" type="number" id="fractal_dimension_mean" min="0" step="0.00001" placeholder="0.00000" required>
                         </div>
                     </div>
                     <div class="field is-grouped">
@@ -158,12 +158,14 @@
 
     <footer class="footer">
         <div class="content has-text-centered">
-          <p>
-            <strong>Cancer Predictor</strong> by <a href="">Our Project GitHub</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-          </p>
+            <p>
+                <strong>Cancer Predictor</strong> by <a href="">Our Project GitHub</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
         </div>
-      </footer>
+    </footer>
+    
+    <script src="../static/js/predictForm.js"></script>
 </body>
 
 </html>
