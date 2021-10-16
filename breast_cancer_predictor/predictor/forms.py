@@ -12,6 +12,3 @@ class Patient(forms.Form):
     concave_points_mean = forms.FloatField()
     symmetry_mean = forms.FloatField()
     fractal_mean = forms.FloatField()
-
-    def clean(self):
-        all_clean_data = super().clean()
