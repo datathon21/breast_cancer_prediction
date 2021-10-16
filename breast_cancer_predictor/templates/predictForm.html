@@ -79,6 +79,7 @@
             <div class="column">
                 <form action="/predict/" method="POST">
                     {% csrf_token %}
+                    <h2 class="title"> Enter tumor information </h2>
                     <div class="field">
                         <label for="radius_mean"> Radius Mean </label>
                         <div class="control">
