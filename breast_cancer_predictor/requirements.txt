@@ -1,0 +1,30 @@
+argon2-cffi==21.1.0
+astroid==2.4.2
+bcrypt==3.1.7
+certifi==2020.6.20
+cffi==1.14.6
+colorama==0.4.4
+Django==2.1.1
+Faker==5.0.0
+isort==4.3.21
+joblib==0.14.1
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+numpy==1.18.5
+pandas==0.25.3
+Pillow==7.2.0
+psycopg2==2.8.6
+pycparser==2.20
+pylint==2.6.2
+python-dateutil==2.8.2
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+scikit-learn==0.22.2.post1
+scipy==1.4.1
+six==1.16.0
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+text-unidecode==1.3
+toml==0.10.2
+typed-ast==1.4.3
+typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1624965014186/work
+wincertstore==0.2
+wrapt==1.12.1
