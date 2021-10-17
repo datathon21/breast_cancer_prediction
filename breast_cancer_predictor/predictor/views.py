@@ -61,3 +61,6 @@ def predict(request):
         return render(request, 'results.html', {'msg':msg, 'accuracy':accuracy, 'precision':precision,'recall':recall})
         
     return render(request, 'predictForm.html', {'form':form})
+
+def details(request):
+    return render(request, 'showPage.html')
