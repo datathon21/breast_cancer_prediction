@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from . import forms
 from sklearn.model_selection import train_test_split
@@ -36,7 +37,6 @@ def predict(request):
         patient_info = [[radius_mean,texture_mean,perimeter_mean,area_mean,smoothness_mean,
                         compactness_mean,concavity_mean,concave_points_mean,symmetry_mean,fractal_mean]]
 
-        # pandas dataframe
         df = pd.read_csv('predictor/cleaned_data.csv')
         X = df.drop('diagnosis',axis=1)
         y = df['diagnosis']
@@ -54,9 +54,10 @@ def predict(request):
             msg = "Our model predicts that this mass is cancerous"
         else:
             msg = "Our model predicts that this mass is not cancerous"
+        accuracy = round(accuracy_score(y_test, y_pred) * 100,2)
+        precision = round(precision_score(y_test, y_pred) * 100, 2)
+        recall = round(recall_score(y_test, y_pred) * 100, 2)
 
-        print(msg)
-        print(classification_report(y_test,y_pred))
-        return redirect('/predict/')
+        return render(request, 'results.html', {'msg':msg, 'accuracy':accuracy, 'precision':precision,'recall':recall})
         
     return render(request, 'predictForm.html', {'form':form})
