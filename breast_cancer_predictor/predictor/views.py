@@ -9,6 +9,10 @@ from sklearn.metrics import precision_score, recall_score
 from sklearn.metrics import plot_precision_recall_curve, plot_roc_curve
 import pandas as pd
 import numpy as np
+import warnings
+
+warnings.filterwarnings("ignore")
+warnings.simplefilter(action='ignore', category=FutureWarning)  
 
 
 def index(request):
@@ -38,25 +42,21 @@ def predict(request):
         y = df['diagnosis']
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=101)
-        scaler = StandardScaler()
-        scaled_X_train = scaler.fit_transform(X_train)
-        scaled_X_test = scaler.transform(X_test)
 
         log_model = LogisticRegressionCV()
 
-        log_model.get_params()
+        log_model.fit(X_train, y_train)
+        y_pred = log_model.predict(X_test)
 
-        log_model.fit(scaled_X_train, y_train)
-        y_pred = log_model.predict(scaled_X_test)
+        result = float(log_model.predict(patient_info)[0])
 
-        log_model.C_
-        log_model.get_params()
+        if result > 0:
+            msg = "Our model predicts that this mass is cancerous"
+        else:
+            msg = "Our model predicts that this mass is not cancerous"
 
-        confusion_matrix(y_test,y_pred)
+        print(msg)
         print(classification_report(y_test,y_pred))
-
-        print(log_model.predict(patient_info))
-        print(log_model.predict_proba(patient_info))
-        # return '<h1>result: {}, proba: {}</h1>'.format(str(log_model.predict(patient_info)), str(log_model.predict_proba(patient_info)))
-
+        return redirect('/predict/')
+        
     return render(request, 'predictForm.html', {'form':form})
