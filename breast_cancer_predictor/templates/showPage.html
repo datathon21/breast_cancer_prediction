@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/index.css">
+    <title> Breast Cancer prediction </title>
+</head>
+
+<body>   
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                
+            </a>
+      
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+      
+                <a class="navbar-item" href="/details">
+                    Details
+                </a>
+
+                <a class="navbar-item" href="{% url 'predict' %}">
+                    Prediction
+                </a>
+      
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+        
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/about">
+                            About
+                        </a>
+                        <a class="navbar-item" href="/contact">
+                            Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="https://github.com/datathon21/breast_cancer_prediction/issues/new">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+        <div class="columns is-mobile">
+            <div class="column">
+                <h1 class="title"> Breast Cancer Prediction </h1> 
+                <div class="buttons">
+                    <a class="button is-primary" href="/details"> Details </a>
+                    <a class="button is-link" href="/predict"> Predict </a>
+                </div>
+            </div>
+            <div class="column">
+                
+            </div>
+        </div>
+    
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Cancer Predictor</strong> by <a href="https://github.com/datathon21/breast_cancer_prediction">Our Project GitHub</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
