@@ -4,3 +4,8 @@
 	flex-direction: column;
 	justify-content: space-between;
 }
+
+.card {
+	margin-bottom: 3rem;
+	padding-top: 1rem;
+}
