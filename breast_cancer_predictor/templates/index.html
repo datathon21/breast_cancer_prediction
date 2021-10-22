@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="../static/css/index.css">
-    <title> Breast Cancer prediction </title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title> Breast Cancer Prediction </title>
 </head>
 
 <body>   
@@ -29,7 +30,7 @@
                     Home
                 </a>
       
-                <a class="navbar-item" href="/details">
+                <a class="navbar-item" href="{% url 'details' %}">
                     Details
                 </a>
 
@@ -57,7 +58,7 @@
                 </div>
             </div>
       
-            <div class="navbar-end">
+            <!-- <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
                         <a class="button is-primary">
@@ -68,7 +69,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </nav>
     <div class="flex-wrapper">
